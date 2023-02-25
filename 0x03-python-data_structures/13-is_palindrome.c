@@ -6,7 +6,7 @@
  * Return: pointer to the first node in the new list
  */
 
-ivoid reverse_listint(listint_t **head)
+void reverse_listint(listint_t **head)
 {
 	listint_t *prev = NULL;
 	listint_t *current = *head;
