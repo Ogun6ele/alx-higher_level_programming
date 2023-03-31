@@ -4,9 +4,12 @@
 """
 
 import requests
+import sys
+
 
 if __name__ == '__main__':
-    r = requests.get('https://alx-intranet.hbtn.io/status')
-    print("Body response:")
-    print("\t- type: {}".format(type(r.text)))
-    print("\t- content: {}".format(r.text))
+    try:
+        r = requests.get(sys.argv[1])
+        print(r.headers['X-Request-Id'])
+    except:
+        pass
